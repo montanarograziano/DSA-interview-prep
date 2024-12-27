@@ -26,3 +26,32 @@ def binary_search(array: list[int], target: int) -> bool:
             right = mid
 
     return False
+
+
+def merge_sort(nums: list[int]) -> list[int]:
+    if len(nums) < 2:
+        return nums
+
+    mid = len(nums) // 2
+
+    left = merge_sort(nums[:mid])
+    right = merge_sort(nums[mid:])
+
+    return merge(nums, left, right)
+
+
+def merge(nums, left, right):
+    i, j, k = 0, 0, 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            nums[k] = left[i]
+            i += 1
+            k += 1
+        else:
+            nums[k] = right[j]
+            j += 1
+            k += 1
+
+    nums[k:] = left[i:] if i < len(left) else right[j:]
+
+    return nums

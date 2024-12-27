@@ -5,9 +5,11 @@ List of algorithms covered so far, dividied by topic:
 
 - Arrays
   - [X] Binary Search
+  - [X] Merge Sort
+  - [ ] Quick Sort
 - Trees
-  - [] DFS
-  - [] BFS
+  - [ ] DFS
+  - [ ] BFS
 - Graphs
-  - [] Shortest Path (non weighted)
-  - [] Dijkstra's
+  - [ ] Shortest Path (non weighted)
+  - [ ] Dijkstra's

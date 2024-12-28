@@ -8,8 +8,8 @@ List of algorithms covered so far, dividied by topic:
   - [X] Merge Sort
   - [ ] Quick Sort
 - Trees
-  - [ ] DFS
-  - [ ] BFS
+  - [X] DFS
+  - [X] BFS
 - Graphs
   - [ ] Shortest Path (non weighted)
   - [ ] Dijkstra's

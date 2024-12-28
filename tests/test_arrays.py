@@ -38,3 +38,7 @@ def test_binary_search(
 )
 def test_merge_sort(array: list[int], expected: list[int]):
     assert merge_sort(array) == expected
+
+
+if __name__ == "__main__":
+    pytest.main()

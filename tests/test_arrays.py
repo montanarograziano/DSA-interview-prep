@@ -4,7 +4,7 @@ from typing import Literal
 
 import pytest
 
-from src.arrays import binary_search, merge_sort
+from src.arrays import binary_search, merge_sort, quick_sort
 
 
 @pytest.mark.parametrize(
@@ -38,6 +38,20 @@ def test_binary_search(
 )
 def test_merge_sort(array: list[int], expected: list[int]):
     assert merge_sort(array) == expected
+
+
+@pytest.mark.parametrize(
+    "array, expected",
+    [
+        ([1, 2, 3, 4, 5], [1, 2, 3, 4, 5]),
+        ([5, 4, 3, 2, 1], [1, 2, 3, 4, 5]),
+        ([1, 3, 2, 4, 5], [1, 2, 3, 4, 5]),
+        ([1, 2, 3, 5, 4], [1, 2, 3, 4, 5]),
+        ([1, 2, 3, 4, 5, 6], [1, 2, 3, 4, 5, 6]),
+    ],
+)
+def test_quick_sort(array: list[int], expected: list[int]):
+    assert quick_sort(array) == expected
 
 
 if __name__ == "__main__":

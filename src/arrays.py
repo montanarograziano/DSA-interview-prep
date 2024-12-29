@@ -55,3 +55,14 @@ def merge(nums, left, right):
     nums[k:] = left[i:] if i < len(left) else right[j:]
 
     return nums
+
+
+def quick_sort(array: list[int]) -> list[int]:
+    if len(array) < 2:
+        return array
+
+    pivot = array[0]
+    less = [i for i in array[1:] if i <= pivot]
+    greater = [i for i in array[1:] if i > pivot]
+
+    return quick_sort(less) + [pivot] + quick_sort(greater)
